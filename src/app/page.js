@@ -1,8 +1,10 @@
 import Banner from "@/Components/Banner";
 import Banner2 from "@/Components/Banner2";
-// import Departments from "@/Components/Departments";
 import OperationTheater from "@/Components/OperationTheater";
 import Departments from "./(departments)/Departments";
+import Specialists from "@/Components/Specialists";
+import AboutHospital from "@/Components/AboutHospital";
+import Technology from "@/Components/Technology";
 
 export default function Home() {
   return (
@@ -10,8 +12,10 @@ export default function Home() {
       <Banner></Banner>
       <Banner2></Banner2>
       <OperationTheater></OperationTheater>
-      {/* <Departments></Departments> */}
-      <Departments/>
+      <Departments></Departments>
+      <Specialists></Specialists>
+      <AboutHospital></AboutHospital>
+      <Technology></Technology>
     </div>
   );
 }

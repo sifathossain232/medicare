@@ -1,33 +1,18 @@
-import { departmentsData } from '@/Components/DepartmentsData';
-import { useParams } from 'next/navigation';
-import React from 'react';
+import Image from 'next/image';
 
-const Modal = ({itemsShow}) => {
-// // console.log(itemsShow)
-let {id} = useParams()
-// // console.log(id)
-// const filter = id.find()
+const Modal = ({ item, close }) => {
+    const { id, title, description, image } = item
 
-
-const data = itemsShow.map((item)=>item) ;
-console.log(data)
-const filter = data.find((items)=>items.id !== id);
-console.log(filter)
-
-// let {id} = useParams()
-// const data =  commentData.map((item)=>item)
-// const newItem = data.find((items) =>items.id ==id)
-// console.log(newItem)
-    
-    
-    // const filter   =  allData.find((singleData)=> singleData.id == id) 
     return (
-        <div>
-  
-  <div  className="bg-red-500 h-96 text-white flex flex-col items-center justify-center"> <p>{filter?.id}</p>  </div> 
-
-
-      
+        <div className='relative'>
+            <div className="bg-white py-[42px] px-[57px] flex flex-col items-center w-[423px] h-[357px] shadow rounded-xl">
+                <Image className="my-10" src={image} width={68} height={68} alt='Loading...' />
+                <p className="text-xl font-medium mb-[5px]">{title}</p>
+                <p className="text-xs font-medium text-[#626C7A] text-justify">{description}</p>
+            </div>
+                <div className={`${close ? "duration-1000 delay-1000 transition" : ""} absolute top-0 left-0 border-b border-r rounded-br-lg px-5`}>
+                    <button onClick={close} className="text-2xl font-bold">x</button>
+                </div>
         </div>
     );
 };

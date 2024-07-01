@@ -14,7 +14,7 @@ import { Ri24HoursFill } from "react-icons/ri";
 const OperationTheater = () => {
     return (
         <div className="w-[1096px] h-[634px] mx-auto mt-[115px]">
-            <div className='shadow rounded-xl'>
+            <div className='cardShadow bg-white rounded-xl'>
                 <div className="w-[703px] mx-auto text-center pt-16">
                     <h1 className="text-[40px] font-semibold mb-[13px]">Our <span className="text-[#5AB32F]">Value</span> To Help You</h1>
                     <p className="text-xs font-medium text-[#626C7A]">At Medicare, we are dedicated to providing exceptional care and improving the health and well-being of our community. Our state-of-the-art facilities, compassionate staff, and commitment to medical.</p>
